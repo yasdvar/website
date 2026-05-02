@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tbilisi Garden – Bakıda Gürcü Restoranı | 1 İlqar Məmmədov</title>
+<meta name="description" content="Tbilisi Garden – Bakıda ən gözəl gürcü restoranı. Təbiətin qoynunda dadlı anlar. 1 İlqar Məmmədov küçəsi, Bakı. Rezervasiya: 070 866 63 65" />
+<meta name="keywords" content="Bakı restoranı, gürcü restoranı Bakı, Tbilisi Garden, xinkali Bakı, Baku restaurant, Gürcü mətbəxi" />
+<meta property="og:title" content="Tbilisi Garden – Bakıda Gürcü Restoranı" />
+<meta property="og:description" content="Təbiətin qoynunda dadlı anlar. Bakının ən gözəl gürcü restoranı." />
+<meta property="og:type" content="restaurant" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #FAF6EE;
+  --cream-dark: #F0E9D8;
+  --bark: #5C3D1E;
+  --bark-light: #8B5E3C;
+  --leaf: #3A6B35;
+  --leaf-pale: #D6E8D3;
+  --stone: #8C7B6B;
+  --text: #2A1F14;
+  --text-muted: #6B5744;
+  --gold: #C49A3C;
+  --white: #FFFDF8;
+  --sp-md: clamp(.9rem, 3vw, 1.5rem);
+  --sp-lg: clamp(1.5rem, 4vw, 2.5rem);
+  --sp-xl: clamp(2.5rem, 6vw, 5rem);
+  --text-xs: clamp(.72rem, 1.5vw, .8rem);
+  --text-sm: clamp(.82rem, 1.8vw, .92rem);
+  --text-base: clamp(.9rem, 2vw, 1rem);
+  --text-xl: clamp(1.15rem, 2.5vw, 1.4rem);
+  --text-2xl: clamp(1.4rem, 3.5vw, 2rem);
+  --text-3xl: clamp(1.7rem, 5vw, 2.6rem);
+  --text-hero: clamp(1.9rem, 7vw, 4rem);
+}
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.65;
+  font-weight: 400;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+button { font-family: inherit; cursor: pointer; }
+
+/* ── UTILITY ── */
+.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 var(--sp-md); }
+
+.section-tag {
+  display: inline-block; font-size: var(--text-xs);
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--leaf); font-weight: 600; margin-bottom: .6rem;
+}
+h2.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--text-3xl); color: var(--bark);
+  font-weight: 700; line-height: 1.2; margin-bottom: 1rem;
+}
+h2.section-title em { color: var(--leaf); font-style: italic; }
+.divider { width: 48px; height: 2px; background: var(--gold); margin-bottom: 1.75rem; }
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .8rem var(--sp-md);
+  background: rgba(250,246,238,.95);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(92,61,30,.1); gap: 1rem;
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(.95rem, 2.2vw, 1.15rem);
+  font-weight: 700; color: var(--bark);
+  text-decoration: none; display: flex; align-items: center; gap: .4rem;
+  white-space: nowrap; flex-shrink: 0;
+}
+.nav-logo span { font-style: italic; font-weight: 500; color: var(--leaf); }
+.nav-links { display: flex; gap: clamp(.6rem, 2vw, 1.5rem); list-style: none; align-items: center; }
+.nav-links a {
+  text-decoration: none; color: var(--text-muted);
+  font-size: var(--text-xs); font-weight: 600;
+  letter-spacing: .06em; text-transform: uppercase; transition: color .2s; white-space: nowrap;
+}
+.nav-links a:hover { color: var(--bark); }
+.nav-cta {
+  background: var(--bark); color: var(--white);
+  border: none; padding: .5rem 1.1rem; border-radius: 2rem;
+  font-size: var(--text-xs); font-weight: 700;
+  letter-spacing: .04em; text-transform: uppercase;
+  transition: background .2s; white-space: nowrap; flex-shrink: 0;
+}
+.nav-cta:hover { background: var(--bark-light); }
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; padding: 6px; flex-shrink: 0;
+}
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--bark); transition: all .3s; }
+
+@media (max-width: 860px) { .nav-links { display: none !important; } }
+@media (max-width: 600px) { .nav-cta { display: none !important; } .hamburger { display: flex !important; } }
+
+/* ── MOBILE MENU ── */
+.mobile-menu {
+  display: none; position: fixed; inset: 0; z-index: 998;
+  background: var(--cream); flex-direction: column;
+  align-items: center; justify-content: center; gap: 1.75rem;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 6vw, 2rem); color: var(--bark); text-decoration: none;
+}
+.mobile-menu-cta {
+  background: var(--bark); color: var(--white);
+  padding: .9rem 2.5rem; border-radius: 3rem;
+  font-size: 1rem; font-weight: 700; border: none;
+  letter-spacing: .04em; margin-top: .5rem;
+}
+.mobile-close {
+  position: absolute; top: 1.25rem; right: 1.25rem;
+  background: none; border: none; font-size: 1.4rem; color: var(--bark); padding: .25rem;
+}
+
+/* ── HERO ── */
+#hero {
+  min-height: 100svh;
+  background:
+    linear-gradient(to bottom, rgba(15,8,2,.32) 0%, rgba(30,18,8,.65) 100%),
+    url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600&q=80') center/cover no-repeat;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: calc(3.5rem + 60px) var(--sp-md) 5rem; position: relative;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: rgba(196,154,60,.18); border: 1px solid rgba(196,154,60,.45);
+  color: #EDD07A; padding: .35rem 1rem; border-radius: 2rem;
+  font-size: var(--text-xs); letter-spacing: .1em; text-transform: uppercase;
+  margin-bottom: 1.1rem; font-weight: 500;
+}
+.hero-badge::before { content: '★★★★'; font-size: .6rem; }
+#hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--text-hero); color: #FFFDF8;
+  line-height: 1.18; font-weight: 700; max-width: 720px; margin-bottom: 1rem;
+}
+#hero h1 em { font-style: italic; color: #C8E0B8; }
+#hero > p {
+  color: rgba(255,253,248,.78); font-size: var(--text-base);
+  max-width: 460px; margin-bottom: 2rem; font-weight: 300;
+}
+.hero-buttons { display: flex; gap: .75rem; flex-wrap: wrap; justify-content: center; }
+.btn-primary {
+  background: var(--bark); color: var(--white);
+  padding: .85rem 2rem; border-radius: 3rem;
+  font-size: var(--text-sm); font-weight: 700;
+  border: none; letter-spacing: .03em; transition: all .25s;
+  text-decoration: none; display: inline-block;
+}
+.btn-primary:hover { background: var(--bark-light); transform: translateY(-2px); }
+.btn-outline {
+  background: transparent; color: var(--white);
+  padding: .85rem 2rem; border-radius: 3rem;
+  font-size: var(--text-sm); font-weight: 400;
+  border: 1.5px solid rgba(255,253,248,.45); letter-spacing: .03em;
+  transition: all .25s; text-decoration: none; display: inline-block;
+}
+.btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,.1); }
+.hero-scroll {
+  position: absolute; bottom: 1.75rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: .4rem;
+  color: rgba(255,253,248,.4); font-size: .66rem; letter-spacing: .14em; text-transform: uppercase;
+}
+.scroll-line { width: 1px; height: 36px; background: linear-gradient(to bottom, rgba(255,253,248,.4), transparent); animation: scrollPulse 2s infinite; }
+@keyframes scrollPulse { 0%,100%{opacity:.3} 50%{opacity:1} }
+
+/* ── SECTIONS ── */
+section { padding: var(--sp-xl) var(--sp-md); }
+
+/* ── ABOUT ── */
+#about { background: var(--white); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-lg); align-items: center; }
+@media (max-width: 680px) { .about-grid { grid-template-columns: 1fr; } }
+.about-image { border-radius: 1.25rem; overflow: hidden; aspect-ratio: 4/5; position: relative; }
+.about-image img { width: 100%; height: 100%; object-fit: cover; }
+.about-image::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%;
+  background: linear-gradient(to top, rgba(92,61,30,.25), transparent);
+  border-radius: 0 0 1.25rem 1.25rem;
+}
+.about-text p { color: var(--text-muted); font-size: var(--text-sm); margin-bottom: 1rem; }
+.stats-row { display: flex; gap: var(--sp-lg); margin-top: 1.75rem; flex-wrap: wrap; }
+.stat { display: flex; flex-direction: column; }
+.stat-num { font-family: 'Playfair Display', serif; font-size: var(--text-2xl); color: var(--bark); font-weight: 700; }
+.stat-label { font-size: var(--text-xs); letter-spacing: .08em; text-transform: uppercase; color: var(--stone); }
+.leaf-tag {
+  display: inline-flex; align-items: center; gap: .4rem;
+  background: var(--leaf-pale); color: var(--leaf);
+  padding: .33rem .8rem; border-radius: 2rem;
+  font-size: var(--text-xs); font-weight: 700; margin-bottom: 1rem;
+}
+
+/* ── MENU ── */
+#menu { background: var(--cream); }
+.menu-tabs {
+  display: flex; gap: .45rem; overflow-x: auto;
+  padding-bottom: .5rem; margin-bottom: 2rem;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.menu-tabs::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex-shrink: 0; padding: .5rem 1rem; border-radius: 2rem;
+  border: 1.5px solid var(--cream-dark); background: transparent;
+  font-size: var(--text-xs); font-weight: 700;
+  color: var(--text-muted); transition: all .2s; white-space: nowrap;
+}
+.tab-btn.active { background: var(--bark); border-color: var(--bark); color: var(--white); }
+.menu-panel { display: none; }
+.menu-panel.active {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+  gap: 1rem;
+}
+@media (min-width: 1200px) { .menu-panel.active { grid-template-columns: repeat(4, 1fr); } }
+.menu-card {
+  background: var(--white); border-radius: 1.1rem; overflow: hidden;
+  border: 1px solid var(--cream-dark); transition: transform .25s, box-shadow .25s;
+}
+.menu-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(92,61,30,.11); }
+.menu-card-img { width: 100%; aspect-ratio: 3/2; overflow: hidden; }
+.menu-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.menu-card:hover .menu-card-img img { transform: scale(1.06); }
+.menu-card-img.no-img {
+  background: linear-gradient(135deg, var(--leaf-pale), var(--cream-dark));
+  display: flex; align-items: center; justify-content: center; font-size: 2.2rem;
+}
+.menu-card-body { padding: .85rem .95rem 1rem; }
+.menu-card-body h3 { font-family: 'Playfair Display', serif; font-size: clamp(.95rem, 2.2vw, 1.05rem); color: var(--bark); font-weight: 500; margin-bottom: .25rem; }
+.menu-card-body p { font-size: var(--text-xs); color: var(--stone); line-height: 1.5; margin-bottom: .6rem; }
+.menu-price { font-family: 'Playfair Display', serif; font-size: var(--text-xl); color: var(--leaf); font-weight: 700; }
+.menu-price-note { font-size: .68rem; color: var(--stone); font-weight: 400; }
+
+/* ── GALLERY ── */
+#gallery { background: var(--bark); padding: var(--sp-xl) var(--sp-md); }
+#gallery .section-tag { color: var(--gold); }
+#gallery h2 { color: var(--white); }
+.gallery-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 180px; gap: .6rem; margin-top: 1.75rem;
+}
+@media (min-width: 560px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 200px; }
+  .gallery-item.tall { grid-row: span 2; }
+}
+@media (min-width: 900px) { .gallery-grid { grid-auto-rows: 250px; } }
+.gallery-item { border-radius: .85rem; overflow: hidden; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; display: block; }
+.gallery-item:hover img { transform: scale(1.05); }
+
+/* ── CONTACT ── */
+#contact { background: var(--white); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-lg); align-items: start; }
+@media (max-width: 680px) { .contact-grid { grid-template-columns: 1fr; } }
+.info-card {
+  background: var(--cream); border-radius: 1rem; padding: 1rem;
+  display: flex; align-items: flex-start; gap: .8rem;
+  margin-bottom: .8rem; border: 1px solid var(--cream-dark);
+}
+.info-icon { width: 38px; height: 38px; border-radius: 50%; background: var(--leaf-pale); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1rem; }
+.info-card h4 { font-size: var(--text-xs); letter-spacing: .08em; text-transform: uppercase; color: var(--stone); margin-bottom: .2rem; font-weight: 700; }
+.info-card p, .info-card a { font-size: var(--text-sm); color: var(--text); font-weight: 400; text-decoration: none; }
+.info-card a:hover { color: var(--bark); }
+.open-badge { display: inline-flex; align-items: center; gap: .4rem; background: #EAF7EA; color: #2E7D32; padding: .28rem .75rem; border-radius: 2rem; font-size: .7rem; font-weight: 700; margin-top: .4rem; }
+.open-dot { width: 7px; height: 7px; background: #43A047; border-radius: 50%; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.35} }
+
+/* ── FORM ── */
+.reserve-form { background: var(--cream); border-radius: 1.25rem; padding: clamp(1.1rem, 4vw, 1.9rem); border: 1px solid var(--cream-dark); }
+.reserve-form h3 { font-family: 'Playfair Display', serif; font-size: var(--text-xl); color: var(--bark); margin-bottom: 1.2rem; }
+.form-group { margin-bottom: .85rem; }
+.form-group label { display: block; font-size: var(--text-xs); letter-spacing: .06em; text-transform: uppercase; color: var(--stone); margin-bottom: .3rem; font-weight: 700; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; padding: .68rem .85rem; border-radius: .7rem;
+  border: 1.5px solid var(--cream-dark); background: var(--white);
+  font-family: 'Nunito', sans-serif; font-size: var(--text-sm); color: var(--text);
+  outline: none; transition: border-color .2s; -webkit-appearance: none; appearance: none;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--leaf); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+@media (max-width: 360px) { .form-row { grid-template-columns: 1fr; } }
+.btn-submit {
+  width: 100%; padding: .88rem; background: var(--bark); color: var(--white);
+  border: none; border-radius: 3rem; font-family: 'Nunito', sans-serif;
+  font-size: var(--text-sm); font-weight: 700; letter-spacing: .04em;
+  transition: background .2s; margin-top: .3rem;
+}
+.btn-submit:hover { background: var(--bark-light); }
+
+/* ── MAP STRIP ── */
+.map-strip {
+  background: var(--cream-dark); padding: .85rem var(--sp-md);
+  display: flex; align-items: center; gap: .6rem;
+  font-size: var(--text-sm); color: var(--bark);
+  border-top: 1px solid rgba(92,61,30,.1); flex-wrap: wrap;
+}
+.map-strip a { color: var(--bark); font-weight: 700; text-decoration: underline; }
+
+/* ── FOOTER ── */
+footer { background: var(--text); color: rgba(255,253,248,.55); padding: clamp(2rem, 5vw, 3.5rem) var(--sp-md); text-align: center; }
+.footer-logo { font-family: 'Playfair Display', serif; font-size: var(--text-xl); color: var(--white); margin-bottom: .4rem; }
+footer p { font-size: var(--text-sm); line-height: 2; }
+footer a { color: rgba(255,253,248,.65); text-decoration: none; }
+footer a:hover { color: var(--white); }
+.footer-divider { width: 40px; height: 1px; background: var(--gold); margin: 1.1rem auto; }
+.social-row { display: flex; justify-content: center; gap: 1rem; margin: .85rem 0; }
+.social-btn { width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,253,248,.2); display: flex; align-items: center; justify-content: center; color: rgba(255,253,248,.55); font-size: .82rem; text-decoration: none; transition: all .2s; }
+.social-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ── TOAST ── */
+.toast {
+  position: fixed; bottom: 1.5rem; left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: var(--bark); color: var(--white);
+  padding: .78rem 1.6rem; border-radius: 3rem;
+  font-size: var(--text-sm); font-weight: 500;
+  z-index: 9999; transition: transform .4s cubic-bezier(.34,1.56,.64,1);
+  white-space: nowrap; max-width: 90vw; text-align: center;
+}
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+/* ── FLOATING CTA ── */
+.float-cta {
+  position: fixed; bottom: 1.1rem; right: 1.1rem; z-index: 990;
+  background: var(--leaf); color: var(--white);
+  padding: .72rem 1.35rem; border-radius: 3rem;
+  font-size: var(--text-sm); font-weight: 700;
+  border: none; box-shadow: 0 4px 18px rgba(58,107,53,.4);
+  transition: all .25s; display: none;
+  align-items: center; gap: .4rem; text-decoration: none;
+}
+.float-cta:hover { transform: translateY(-2px); }
+@media (max-width: 600px) { .float-cta { display: flex; } }
+
+/* ── LARGE SCREEN ── */
+@media (min-width: 1200px) { .container { max-width: 1200px; } .about-grid { gap: 5rem; } }
+@media (min-width: 1600px) { .container { max-width: 1380px; } }
+
+/* ── TOUCH ── */
+@media (hover: none) { .tab-btn { padding: .65rem 1.2rem; min-height: 44px; } .btn-primary, .btn-outline { min-height: 48px; } }
+
+/* ── PRINT ── */
+@media print { nav, .float-cta, .hero-scroll, .mobile-menu { display: none !important; } #hero { min-height: unset; padding: 2rem; } section { padding: 2rem 1rem; } }
+</style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a href="#hero" class="nav-logo">🌿 <span>Tbilisi</span> Garden</a>
+  <ul class="nav-links">
+    <li><a href="#about">Haqqımızda</a></li>
+    <li><a href="#menu">Menyu</a></li>
+    <li><a href="#gallery">Qalereya</a></li>
+    <li><a href="#contact">Əlaqə</a></li>
+  </ul>
+  <button class="nav-cta" onclick="scrollToContact()">Masa Rezerv Et</button>
+  <button class="hamburger" onclick="toggleMobile()" aria-label="Menyu aç"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Naviqasiya menyusu">
+  <button class="mobile-close" onclick="toggleMobile()" aria-label="Bağla">✕</button>
+  <a href="#about" onclick="toggleMobile()">Haqqımızda</a>
+  <a href="#menu" onclick="toggleMobile()">Menyu</a>
+  <a href="#gallery" onclick="toggleMobile()">Qalereya</a>
+  <a href="#contact" onclick="toggleMobile()">Əlaqə</a>
+  <button class="mobile-menu-cta" onclick="toggleMobile(); scrollToContact()">Masa Rezerv Et</button>
+</div>
+
+<section id="hero">
+  <div class="hero-badge">4.6 · 21 Rəy · Bakı</div>
+  <h1>Tbilisi Garden –<br /><em>Təbiətin Qoynunda</em><br />Dadlı Anlar</h1>
+  <p>Gürcü mətbəxinin ən seçilmiş ləzzətlərini unikal bağ atmosferində dadın.</p>
+  <div class="hero-buttons">
+    <button class="btn-primary" onclick="scrollToContact()">Masa Rezerv Et</button>
+    <a href="#menu" class="btn-outline">Menyuya Bax</a>
+  </div>
+  <div class="hero-scroll" aria-hidden="true"><div class="scroll-line"></div>Aşağı dayan</div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image fade-in">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80" alt="Tbilisi Garden restoran atmosferi" loading="lazy" />
+      </div>
+      <div class="about-text fade-in">
+        <span class="section-tag">Haqqımızda</span>
+        <h2 class="section-title">Bakının <em>Ən Yaşıl</em> Guşəsi</h2>
+        <div class="divider"></div>
+        <div class="leaf-tag">🌿 Açıqdır – Gecə 00:00-dək</div>
+        <p>Tbilisi Garden, Gürcüstanın qədim mətbəx ənənələrini Bakı şəhərinin qəlbinə gətirir. 1 İlqar Məmmədov ünvanında yerləşən restoranımız, ağacların kölgəsindəki masalar və isti atmosferi ilə sizi başqa bir dünyaya aparır.</p>
+        <p>Hər yeməyimiz təzə, yerli mənşəli inqrediyentlərdən hazırlanır. Xinkalidən başlayaraq, müxtəlif gürcü şərablarına qədər – hər bir dadlanma yaddaqalan bir təcrübədir.</p>
+        <div class="stats-row">
+          <div class="stat"><span class="stat-num">4.6★</span><span class="stat-label">Ümumi Reytinq</span></div>
+          <div class="stat"><span class="stat-num">21+</span><span class="stat-label">Rəylər</span></div>
+          <div class="stat"><span class="stat-num">20₼+</span><span class="stat-label">Orta Hesab</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="container">
+    <span class="section-tag">İnteraktiv Menyu</span>
+    <h2 class="section-title fade-in">Ləzzətin <em>Hər Nüansı</em></h2>
+    <div class="divider"></div>
+    <div class="menu-tabs" role="tablist">
+      <button class="tab-btn active" onclick="switchTab('soyuq',this)" role="tab">🥗 Soyuq Qəlyanaltılar</button>
+      <button class="tab-btn" onclick="switchTab('isti',this)" role="tab">🍲 İsti Yeməklər</button>
+      <button class="tab-btn" onclick="switchTab('kabab',this)" role="tab">🔥 Kabablar</button>
+      <button class="tab-btn" onclick="switchTab('icki',this)" role="tab">🍷 İçkilər</button>
+    </div>
+
+    <div id="tab-soyuq" class="menu-panel active">
+      <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Paytaxt Salatı" loading="lazy"/></div><div class="menu-card-body"><h3>Paytaxt Salatı</h3><p>Təzə tərəvəzlər, pomidor, xiyar, zeytun yağı və limon suyuyla hazırlanmış klassik salat.</p><div class="menu-price">8 ₼ <span class="menu-price-note">/ porsiya</span></div></div></div>
+      <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&q=80" alt="Tərəvəz Buketi" loading="lazy"/></div><div class="menu-card-body"><h3>Təzə Tərəvəz Buketi</h3><p>Mövsüm tərəvəzlərindən ibarət rəngarəng salat, otlar və xüsusi sous ilə.</p><div class="menu-price">10 ₼ <span class="menu-price-note">/ porsiya</span></div></div></div>
+      <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80" alt="Pxali" loading="lazy"/></div><div class="menu-card-body"><h3>Gürcü Pxalisi</h3><p>Ispanaq, qoz, sarımsaq və gürcü ədviyyatlarından hazırlanmış ənənəvi pxali topları.</p><div class="menu-price">9 ₼ <span class="menu-price-note">/ porsiya</span></div></div></div>
+      <div class="menu-card"><div class="menu-card-img no-img">🧀</div><div class="menu-card-body"><h3>Suluguni Pendir</h3><p>Gürcüstandan gətirilmiş, şorəkli suluguni pendir dilimləri.</p><div class="menu-price">12 ₼ <span class="menu-price-note">/ porsiya</span></div></div></div>
+    </div>
+
+    <div id="tab-isti" class="menu-panel">
+      <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Xinkali" loading="lazy"/></div><div class="menu-card-body"><h3>Gürcü Xəngəli</h3><p>İçi ətli ənənəvi xinkali – Gürcüstanın qüruru. Əllə bükülmüş buğda unlu xəmir.</p><div class="menu-price">1.50 ₼ <span class="menu-price-note">/ ədəd</span></div></div></div>
+      <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=600&q=80" alt="Xaçapuri" loading="lazy"/></div><div class="menu-card-body"><h3>Adjaruli Xaçapuri</h3><p>Qayıq formasında çörək içi – əriyən pendir, yumurta və kərə yağı ilə.</p><div class="menu-price">14 ₼ <span class="menu-price-note">/ ədəd</span></div></div></div>
+      <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Quzu Antrikot" loading="lazy"/></div><div class="menu-card-body"><h3>Quzu Antrikot</h3><p>Köz üzərində hazırlanmış tender quzu əti, otlar və qırmızı sous ilə.</p><div class="menu-price">18 ₼ <span class="menu-price-note">/ porsiya</span></div></div></div>
+      <div class="menu-card"><div class="menu-card-img no-img">🍲</div><div class="menu-card-body"><h3>Çaxoxbili</h3><p>Toyuq əti, pomidor, soğan və gürcü ədviyyatları ilə hazırlanmış qədim gürcü güvəci.</p><div class="menu-price">16 ₼ <span class="menu-price-note">/ porsiya</span></div></div></div>
+    </div>
+
+    <div id="tab-kabab" class="menu-panel">
+      <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=600&q=80" alt="Mtsvadi" loading="lazy"/></div><div class="menu-card-body"><h3>Mtsvadi (Gürcü Kabab)</h3><p>Ağac odunda hazırlanmış camışı ət kabab – gürcüstanın ən sevilən yeməyi.</p><div class="menu-price">22 ₼ <span class="menu-price-note">/ porsiya</span></div></div></div>
+      <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&q=80" alt="Toyuq Kabab" loading="lazy"/></div><div class="menu-card-body"><h3>Toyuq Kabab</h3><p>Xüsusi marinatda saxlanılmış toyuq döş əti, köz üzərində qızardılmış.</p><div class="menu-price">16 ₼ <span class="menu-price-note">/ porsiya</span></div></div></div>
+      <div class="menu-card"><div class="menu-card-img no-img">🥩</div><div class="menu-card-body"><h3>Lula Kabab</h3><p>Qiymə ətdən hazırlanmış ənənəvi lula – soğan, zəfəran, otlar ilə.</p><div class="menu-price">15 ₼ <span class="menu-price-note">/ porsiya</span></div></div></div>
+      <div class="menu-card"><div class="menu-card-img no-img">🐑</div><div class="menu-card-body"><h3>Quzu Kabab</h3><p>Seçilmiş quzu ətindən hazırlanmış kabab – nar sousu ilə.</p><div class="menu-price">24 ₼ <span class="menu-price-note">/ porsiya</span></div></div></div>
+    </div>
+
+    <div id="tab-icki" class="menu-panel">
+      <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80" alt="Limonad" loading="lazy"/></div><div class="menu-card-body"><h3>Ev Üsullu Limonad</h3><p>Nanə, limon, zəncəfil – üç fərqli dadda hazırlanmış təzə ev limonadı.</p><div class="menu-price">5 ₼ <span class="menu-price-note">/ stəkan</span></div></div></div>
+      <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=80" alt="Gürcü Şərabları" loading="lazy"/></div><div class="menu-card-body"><h3>Gürcü Şərabları</h3><p>Kaxetiya bölgəsindən gətirilmiş qırmızı, ağ və amberi şərablar.</p><div class="menu-price">8 ₼+ <span class="menu-price-note">/ stəkan</span></div></div></div>
+      <div class="menu-card"><div class="menu-card-img no-img">☕</div><div class="menu-card-body"><h3>Gürcü Çayı</h3><p>Zəfəran, darçın əlavə edilmiş isti gürcü çayı.</p><div class="menu-price">4 ₼ <span class="menu-price-note">/ çaydan</span></div></div></div>
+      <div class="menu-card"><div class="menu-card-img no-img">🍺</div><div class="menu-card-body"><h3>Gürcü Pivəsi</h3><p>Natasha, Kazbegi – seçilmiş gürcü pivə brendləri soyuq olaraq.</p><div class="menu-price">6 ₼ <span class="menu-price-note">/ şüşə</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <span class="section-tag">Qalereya</span>
+    <h2 class="section-title">Gözlər <em>Şahidi</em> Olsun</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item tall"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80" alt="Restoran atmosferi" loading="lazy"/></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&q=80" alt="Restoran masalar" loading="lazy"/></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&q=80" alt="Gürcü yeməkləri" loading="lazy"/></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&q=80" alt="Salat" loading="lazy"/></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=500&q=80" alt="Xinkali" loading="lazy"/></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <span class="section-tag">Əlaqə &amp; Rezervasiya</span>
+    <h2 class="section-title fade-in">Masa <em>Ayırın</em></h2>
+    <div class="divider"></div>
+    <div class="contact-grid">
+      <div class="fade-in">
+        <div class="info-card"><div class="info-icon">📍</div><div><h4>Ünvan</h4><p>1 İlqar Məmmədov küçəsi, Bakı</p></div></div>
+        <div class="info-card"><div class="info-icon">📞</div><div><h4>Telefon</h4><a href="tel:+994708666365">070 866 63 65</a></div></div>
+        <div class="info-card"><div class="info-icon">🕐</div><div><h4>İş Saatları</h4><p>Hər gün – Gecə 00:00-dək</p><div class="open-badge"><span class="open-dot"></span> İndi Açıqdır</div></div></div>
+        <div class="info-card"><div class="info-icon">💰</div><div><h4>Qiymət Aralığı</h4><p>1 nəfər üçün 20–30 ₼</p></div></div>
+      </div>
+      <div class="reserve-form fade-in">
+        <h3>🌿 Rezervasiya Formu</h3>
+        <div class="form-group"><label for="r-name">Ad Soyadınız</label><input type="text" id="r-name" placeholder="Əli Hüseynov" autocomplete="name"/></div>
+        <div class="form-row">
+          <div class="form-group"><label for="r-phone">Telefon</label><input type="tel" id="r-phone" placeholder="070 XXX XX XX" autocomplete="tel" inputmode="tel"/></div>
+          <div class="form-group"><label for="r-guests">Nəfər Sayı</label><select id="r-guests"><option>1–2 nəfər</option><option>3–4 nəfər</option><option selected>5–6 nəfər</option><option>7–10 nəfər</option><option>10+ nəfər</option></select></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="r-date">Tarix</label><input type="date" id="r-date"/></div>
+          <div class="form-group"><label for="r-time">Saat</label><input type="time" id="r-time" value="19:00"/></div>
+        </div>
+        <div class="form-group"><label for="r-note">Xüsusi Qeyd (İstəyə görə)</label><textarea id="r-note" rows="2" placeholder="Doğum günü, allerji, masa seçimi..."></textarea></div>
+        <button class="btn-submit" onclick="submitReservation()">WhatsApp ilə Göndər →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="map-strip">
+  <span>🗺️</span>
+  <span><strong>Tbilisi Garden</strong> — 1 İlqar Məmmədov küçəsi, Bakı &nbsp;·&nbsp;
+  <a href="https://maps.google.com/?q=Tbilisi+Garden+Baku" target="_blank" rel="noopener">Xəritədə bax →</a></span>
+</div>
+
+<footer>
+  <div class="footer-logo">🌿 Tbilisi Garden</div>
+  <p style="color:rgba(255,253,248,.4);font-size:.76rem;margin-top:.25rem;">Bakıda Gürcü Mətbəxi</p>
+  <div class="footer-divider"></div>
+  <div class="social-row">
+    <a class="social-btn" href="#" aria-label="Instagram">IG</a>
+    <a class="social-btn" href="#" aria-label="TikTok">TK</a>
+    <a class="social-btn" href="tel:+994708666365" aria-label="Zəng et">☎</a>
+  </div>
+  <p><a href="tel:+994708666365">070 866 63 65</a><br/>1 İlqar Məmmədov, Bakı · Hər gün 00:00-dək açıqdır</p>
+  <p style="margin-top:1.5rem;font-size:.68rem;color:rgba(255,253,248,.22);">© 2025 Tbilisi Garden. Bütün hüquqlar qorunur.</p>
+</footer>
+
+<a href="tel:+994708666365" class="float-cta">📞 Zəng Et</a>
+<div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+<script>
+function scrollToContact(){document.getElementById('contact').scrollIntoView({behavior:'smooth'});}
+
+function toggleMobile(){
+  var m=document.getElementById('mobileMenu');
+  m.classList.toggle('open');
+  document.body.style.overflow=m.classList.contains('open')?'hidden':'';
+}
+
+function switchTab(tab,btn){
+  document.querySelectorAll('.menu-panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('tab-'+tab).classList.add('active');
+  btn.classList.add('active');
+}
+
+function showToast(msg){
+  var t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show');},3500);
+}
+
+function submitReservation(){
+  var name=document.getElementById('r-name').value.trim();
+  var phone=document.getElementById('r-phone').value.trim();
+  var guests=document.getElementById('r-guests').value;
+  var date=document.getElementById('r-date').value;
+  var time=document.getElementById('r-time').value;
+  var note=document.getElementById('r-note').value.trim();
+  if(!name||!phone){showToast('⚠️ Ad və telefon daxil edin');return;}
+  var msg='🌿 *Tbilisi Garden – Rezervasiya*\n\n'
+    +'👤 Ad: '+name+'\n'
+    +'📞 Telefon: '+phone+'\n'
+    +'👥 Nəfər: '+guests+'\n'
+    +'📅 Tarix: '+date+'\n'
+    +'🕐 Saat: '+time
+    +(note?'\n📝 Qeyd: '+note:'');
+  window.open('https://wa.me/994708666365?text='+encodeURIComponent(msg),'_blank');
+  showToast('✅ WhatsApp açılır – mesajı göndərin!');
+  ['r-name','r-phone','r-note'].forEach(function(id){document.getElementById(id).value='';});
+}
+
+// Fade-in on scroll
+var observer=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});
+},{threshold:0.08});
+document.querySelectorAll('.fade-in').forEach(function(el){observer.observe(el);});
+
+// Date
+var today=new Date().toISOString().split('T')[0];
+document.getElementById('r-date').min=today;
+document.getElementById('r-date').value=today;
+
+// Close mobile menu clicking backdrop
+document.getElementById('mobileMenu').addEventListener('click',function(e){if(e.target===this)toggleMobile();});
+</script>
+</body>
+</html>
